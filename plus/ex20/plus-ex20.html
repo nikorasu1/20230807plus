@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio20</title>
+
+
+</head>
+<style>
+
+.azul
+{
+
+  color: blue;
+
+
+}   
+.vermelho
+
+{
+
+   color: crimson;
+
+}
+
+.verde
+{
+   
+  color: green;
+
+}
+
+</style>
+
+<body>
+    <script>
+        var c, s, g, t, i, c2;
+
+        g = 1;
+        s = 0;
+        c = 0;
+        i = 0;
+        c2 = 0;
+
+        document.write("Os 30 primeiros números da série Fibonacci são: ");
+
+        for (c = 1; c<=30; ++c)
+        {
+            t = g;
+            s = s+t;
+            g = s-t;
+                  
+            
+            for (i = 1; i<=s; ++i)
+            
+            {
+                if (s%i==0)
+                {
+                    ++c2;
+                }
+                 
+
+            }
+
+            if (c2==2)
+
+            {
+                document.write("<p class='verde'>",s, ".");
+                c2=0;
+            }
+
+            if(s%2==0)
+            {
+                document.write("<p class='azul'>",s, ".");
+                c2=0;
+            }
+
+            else if (s%2==1)
+
+            { 
+                document.write("<p class='vermelho'>",s, ".");
+                c2=0;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio13</title>
+</head>
+<body>
+    <script>
+        var n1, n2, n3, v1;
+
+        v1=0;
+
+        do   
+        {
+            n1 = parseFloat(window.prompt("Informe o valor do primeiro lado do triângulo","0"))
+        }
+        while(isNaN(n1))
+        
+        do
+        {
+            n2 = parseFloat(window.prompt("Informe o valor do segundo lado do triângulo","0"))
+        }
+        while(isNaN(n2))
+        
+        do
+        {
+            n3 = parseFloat(window.prompt("Informe o valor do terceiro lado do triângulo","0"))
+        }
+        while(isNaN(n3))
+
+        if (n1+n2>n3 & n1+n3>n2 & n2+n3>n1)
+        {
+            v1=1;
+
+            if (v1==1)
+            {
+                if (n1==n2 & n2==n3)
+                {
+                    document.write("Equilátero <br>");
+                    
+                    const myImage = new Image(700, 606);
+                    myImage.src = "equilatero.png";
+                    document.body.appendChild(myImage);
+
+                }
+
+                else if (n1==n2 || n2==n3 || n1==n3)
+
+                {
+                    document.write("Isósceles <br>");
+                    const myImage = new Image(470, 749);
+                    myImage.src = "iso.png";
+                    document.body.appendChild(myImage);
+                }
+
+                else
+
+                {
+                    document.write("Escaleno <br>");
+                    const myImage = new Image(386, 207);
+                    myImage.src = "esc.png";
+                    document.body.appendChild(myImage);
+                }
+                
+            }
+        
+        }
+
+        else
+        {
+            document.write("Não forma um triângulo");
+            const myImage = new Image(800, 600);
+            myImage.src = "sonic.png";
+            document.body.appendChild(myImage);
+            
+        }
+
+    </script>
+
+
+</body>
+</html>
